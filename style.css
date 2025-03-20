@@ -1,0 +1,75 @@
+.container{
+    display:grid;
+    background-color: aqua;
+    height: 800px;
+    row-gap: 10px;
+     gap:10px;
+     grid-template-areas:
+     'header header'
+     'nav nav'
+     'sessao1 sobremim'
+      'sessao2 postagem'
+     'contato redesociais'
+     'footer footer'
+     ;grid-template-columns: 2fr 1fr;
+     grid-template-rows: auto auto auto auto auto auto;
+     
+    /*  justify-content:center;
+     align-content: center; */
+   /*   place-content: center; */
+      
+}
+.container > div {
+    background-color: azure;
+    padding:20px;
+    text-align: center;
+    font-size:30px;
+    border:1px solid black 
+}
+.intem1{
+    /*grid-column-start:1;
+    grid-column-end:4;*/    
+ /*grid-column: 1/ span 4; */
+ grid-area: header;
+}
+.intem2{
+/* grid-column-start:2;
+grid-column-end:2; */
+grid-area: nav;
+}
+.intem3{
+    grid-area: sessao1;
+}
+.intem4{
+    grid-area: sessao2;
+}
+.intem5{
+    grid-area:contato;
+}
+.intem6{
+    grid-area: sobremim;
+}
+.intem7{
+    grid-area: postagem;
+}
+.intem8{
+    grid-area: redesociais;
+}
+.intem9{
+   /*  grid-column: 1/ span 4; */
+    grid-area: footer;
+}
+@media (max-width: 500px){.container{
+    grid-template-areas:
+    'header'
+    'nav'
+    'sobremim'
+     'sessao2'
+    'postagem'
+    'redesociais'
+    'footer'
+;
+grid-auto-columns: auto;
+}
+
+}
